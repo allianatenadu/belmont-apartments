@@ -44,7 +44,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/belmont2.jpg"
+            src="/images/belmont3.jpg"
             alt="Belmont Apartments lobby"
             fill
             className="object-cover"
