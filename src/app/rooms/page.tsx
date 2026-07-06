@@ -23,7 +23,7 @@ const rooms = [
     price: 'From ₵300-₵600',
     desc: 'Generous living with a distinct separation between rest and life. The one-bedroom suite is our most popular residence, offering flexibility and comfort in equal measure.',
     features: ['Washing Machine', 'Full kitchen', 'Walk-in wardrobe', 'Garden View'],
-    img: '/images/belmont-room3.jpg',
+    img: '/images/belmont-room2.jpg',
   },
   // {
   //   name: 'Classic ',

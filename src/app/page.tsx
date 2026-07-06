@@ -16,7 +16,7 @@ const rooms = [
     beds: 'Standard room . 1 Ironing Stand . 1 Washing Machine',
     size: '24 m²',
     price: 'From ₵300- ₵600/day',
-   img: '/images/belmont-room3.jpg',
+   img: '/images/belmont-room2.jpg',
   },
   // {
   //   name: 'Classic Suite',
