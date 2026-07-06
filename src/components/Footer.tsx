@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: 'Residences', href: '/rooms' },
-                { label: 'Amenities', href: '/rooms#amenities' },
+                // { label: 'Amenities', href: '/rooms#amenities' },
                 { label: 'About Us', href: '/about' },
                 { label: 'Book a Tour', href: '/booking' },
               ].map((l) => (

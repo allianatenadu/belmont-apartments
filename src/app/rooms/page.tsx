@@ -8,7 +8,7 @@ const rooms = [
     beds: '1 Studio',
     baths: '1 Bath',
     sleeps: '1–2',
-    price: '$1,200',
+    price: 'From ₵200-₵400',
     desc: 'An intelligent layout that maximises every square metre. The studio is refined, calm, and complete — ideal for the professional or the minimalist.',
     features: ['Open-plan kitchen', 'Juliet balcony', 'Built-in wardrobe', 'High ceilings'],
     img: '/images/belmont-room1.jpg',
@@ -20,23 +20,23 @@ const rooms = [
     beds: '1 Bedroom',
     baths: '1 Bath',
     sleeps: '2',
-    price: '$1,800',
+    price: 'From ₵300-₵600',
     desc: 'Generous living with a distinct separation between rest and life. The one-bedroom suite is our most popular residence, offering flexibility and comfort in equal measure.',
     features: ['Washing Machine', 'Full kitchen', 'Walk-in wardrobe', 'Garden View'],
-    img: '/images/belmont-room2.jpg',
-  },
-  {
-    name: 'Classic ',
-    full: 'Classic Suite',
-    size: '24 m²',
-    beds: '1 Bedrooms',
-    baths: '1 Baths',
-    sleeps: '4',
-    price: '$2,600',
-    desc: 'Space for life in all its dimensions. Two generous bedrooms, dual bathrooms, and an expansive living area crafted for families or those who simply prefer more room.',
-    features: [ 'Open dining area', 'Private balcony','Garden View'],
     img: '/images/belmont-room3.jpg',
   },
+  // {
+  //   name: 'Classic ',
+  //   full: 'Classic Suite',
+  //   size: '24 m²',
+  //   beds: '1 Bedrooms',
+  //   baths: '1 Baths',
+  //   sleeps: '4',
+  //   price: '$2,600',
+  //   desc: 'Space for life in all its dimensions. Two generous bedrooms, dual bathrooms, and an expansive living area crafted for families or those who simply prefer more room.',
+  //   features: [ 'Open dining area', 'Private balcony','Garden View'],
+  //   img: '/images/belmont-room3.jpg',
+  // },
   // {
   //   name: 'Penthouse',
   //   full: 'Penthouse Suite',
@@ -141,7 +141,7 @@ export default function RoomsPage() {
               <div className="flex items-center gap-6">
                 <div>
                   <p className="text-xs tracking-widest uppercase text-warm-gray font-sans">From</p>
-                  <p className="font-display text-3xl text-charcoal">{room.price}<span className="text-base text-warm-gray font-sans">/mo</span></p>
+                  <p className="font-display text-3xl text-charcoal">{room.price}<span className="text-base text-warm-gray font-sans">/day</span></p>
                 </div>
                 <Link href="/booking" className="btn-primary text-xs">
                   Enquire

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const residenceTypes = ['Comfort Suite', 'Executive Suite', 'Classic Suite']
+const residenceTypes = ['Comfort Suite', 'Executive Suite']
 const tourTypes = ['In-Person Tour', 'Virtual Tour', 'Phone Consultation']
 const timeSlots = ['9:00 AM', '10:30 AM', '12:00 PM', '2:00 PM', '3:30 PM', '5:00 PM']
 

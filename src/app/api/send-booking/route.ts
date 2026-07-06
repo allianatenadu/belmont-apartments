@@ -111,7 +111,7 @@ export async function POST(req: Request) {
               </div>
 
               <div class="footer">
-                <p>Belmont Apartments · 12 Belmont Avenue, East Legon, Accra · allianatenadu@gmail.com</p>
+                <p>Belmont Apartments · 12 Belmont Avenue, SDA Road, Akim Oda · belmontoapartments@gmail.com</p>
               </div>
             </div>
           </body>

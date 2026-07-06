@@ -5,27 +5,27 @@ const rooms = [
   {
     name: 'Comfort Suite',
     desc: 'Elegant and efficient. Perfect for the modern professional seeking refined solo living.',
-    beds: '1 bed, 1 kitchen, 1toilet',
-    size: '45 m²',
-    price: 'From $1,200/mo',
+    beds: '1 bed . 1 kitchen . 1toilet',
+    size: '24 m²',
+    price: 'From ₵200-₵400/day',
     img: '/images/belmont-room1.jpg',
   },
   {
     name: 'Executive Suite',
     desc: 'Generous proportions with a separate living space crafted for comfort and privacy.',
-    beds: 'Standard room, 1 Ironing Stand, 1Washing Machine',
-    size: '75 m²',
-    price: 'From $1,800/mo',
+    beds: 'Standard room . 1 Ironing Stand . 1 Washing Machine',
+    size: '24 m²',
+    price: 'From ₵300- ₵600/day',
    img: '/images/belmont-room3.jpg',
   },
-  {
-    name: 'Classic Suite',
-    desc: 'The pinnacle of urban living — sweeping city views, curated interiors, exceptional space.',
-    beds: '1 beds · 2 baths',
-    size: '130 m²',
-    price: 'From $3,200/mo',
-   img: '/images/belmont-room2.jpg',
-  },
+  // {
+  //   name: 'Classic Suite',
+  //   desc: 'The pinnacle of urban living — sweeping city views, curated interiors, exceptional space.',
+  //   beds: '1 beds · 1 baths . 1 kitchen',
+  //   size: '24 m²',
+  //   price: 'From ₵ 200-₵400/day',
+  //  img: '/images/belmont-room2.jpg',
+  // },
 ]
 
 const amenities = [
@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pb-24 pt-40 w-full">
-          <p className="section-label text-gold-light mb-6">Akim Oda · Ghana</p>
+          <p className="section-label text-gold mb-6">Akim Oda · Ghana</p>
           <h1 className="font-display font-light text-cream text-[clamp(3.5rem,10vw,9rem)] leading-none mb-8 max-w-3xl">
             Live Beyond<br />
             <span className="italic">Ordinary</span>
@@ -148,7 +148,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {rooms.map((room) => (
               <div key={room.name} className="group bg-cream overflow-hidden cursor-pointer">
                 <div className="aspect-[4/3] overflow-hidden">
