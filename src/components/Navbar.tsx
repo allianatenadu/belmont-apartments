@@ -1,54 +1,59 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const links = [
-  { label: "Residences", href: "/rooms" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+  { label: 'Residences', href: '/rooms' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+]
 
-type NavbarProps = {
-  /**
-   * Set this to true ONLY on pages that render a full-bleed dark/image
-   * hero directly behind the navbar (e.g. the homepage). On every other
-   * page the navbar starts in its "active" (solid cream bg, charcoal
-   * text) state, since there's no dark backdrop for the transparent
-   * cream-on-cream style to sit on top of.
-   */
-  transparentOnTop?: boolean;
-};
+// Only the homepage renders a full-bleed dark/image hero directly behind
+// the navbar. Every other route needs the solid cream bg + charcoal text
+// from the very first paint, since there's no dark backdrop for the
+// transparent cream-on-cream style to sit on top of.
+const TRANSPARENT_ON_TOP_ROUTES = new Set(['/'])
 
-export default function Navbar({ transparentOnTop = false }: NavbarProps) {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+export default function Navbar() {
+  const pathname = usePathname()
+  const transparentOnTop = TRANSPARENT_ON_TOP_ROUTES.has(pathname)
+
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    if (!transparentOnTop) return;
+    if (!transparentOnTop) return
 
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 40)
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll)
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [transparentOnTop]);
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [transparentOnTop])
 
-  const active = !transparentOnTop || scrolled || open;
+  // Reset scroll-derived state when navigating to a page that doesn't use it
+  useEffect(() => {
+    if (!transparentOnTop) setScrolled(false)
+  }, [transparentOnTop])
 
-  const textColor = active ? "text-charcoal" : "text-cream";
-  const burgerColor = active ? "bg-charcoal" : "bg-cream";
+  const active = !transparentOnTop || scrolled || open
+
+  const textColor = 'text-charcoal'
+  const burgerColor = 'bg-charcoal'
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         active
-          ? "bg-cream/95 backdrop-blur-md shadow-sm border-b border-stone/40"
-          : "bg-transparent"
+          ? 'bg-cream/95 backdrop-blur-md shadow-sm border-b border-stone/40'
+          : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto h-20 px-6 lg:px-12 grid grid-cols-3 items-center">
+      <nav className="max-w-7xl mx-auto h-20 px-6 lg:px-12 grid grid-cols-2 md:grid-cols-3 items-center">
+
         {/* Logo */}
         <div className="flex justify-start">
           <Link href="/" className="flex items-center gap-3">
@@ -88,8 +93,8 @@ export default function Navbar({ transparentOnTop = false }: NavbarProps) {
             href="/booking"
             className={`px-7 py-3 uppercase tracking-[0.2em] text-xs border transition-all duration-300 ${
               active
-                ? "bg-charcoal text-cream border-charcoal hover:bg-gold hover:border-gold hover:text-charcoal"
-                : "border-cream text-cream hover:bg-cream hover:text-charcoal"
+                ? 'bg-charcoal text-cream border-charcoal hover:bg-gold hover:border-gold hover:text-charcoal'
+                : 'border-cream text-cream hover:bg-cream hover:text-charcoal'
             }`}
           >
             Book Now
@@ -104,17 +109,17 @@ export default function Navbar({ transparentOnTop = false }: NavbarProps) {
         >
           <span
             className={`block w-6 h-0.5 transition-all duration-300 ${burgerColor} ${
-              open ? "rotate-45 translate-y-2" : ""
+              open ? 'rotate-45 translate-y-2' : ''
             }`}
           />
           <span
             className={`block w-6 h-0.5 transition-all duration-300 ${burgerColor} ${
-              open ? "opacity-0" : ""
+              open ? 'opacity-0' : ''
             }`}
           />
           <span
             className={`block w-6 h-0.5 transition-all duration-300 ${burgerColor} ${
-              open ? "-rotate-45 -translate-y-2" : ""
+              open ? '-rotate-45 -translate-y-2' : ''
             }`}
           />
         </button>
@@ -144,5 +149,5 @@ export default function Navbar({ transparentOnTop = false }: NavbarProps) {
         </div>
       )}
     </header>
-  );
+  )
 }
