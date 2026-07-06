@@ -47,7 +47,7 @@ export default function AboutPage() {
              Belmont Apartments was created with one simple vision: to provide a peaceful, comfortable, and welcoming place to stay in the heart of Akim Oda.
             </p>
             <p>
-              Designed for both short and extended stays, every apartment combines the privacy of home with the convenience of modern hospitality. Each fully self-contained unit features a comfortable bedroom, a modern en-suite bathroom, a fully equipped kitchen, air conditioning, and reliable high-speed WiFi—everything you need for a relaxing stay.
+              Designed for both short and extended stays, every apartment combines the privacy of home with the convenience of modern hospitality. Each fully self-contained unit features a comfortable bedroom, a modern en-suite bathroom, a fully equipped kitchen, air conditioning, and reliable high-speed WiFi everything you need for a relaxing stay.
             </p>
             <p>
               Surrounded by a serene environment, beautiful gardens, and secure parking, Belmont Apartments offers a calm escape whether you're visiting for business, family, or leisure.
