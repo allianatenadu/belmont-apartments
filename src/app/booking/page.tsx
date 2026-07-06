@@ -99,7 +99,7 @@ export default function BookingPage() {
               <p className="text-xs tracking-superwide uppercase text-gold font-sans mb-4">Contact us directly</p>
               <div className="space-y-2 text-sm font-sans text-warm-gray">
                 <p>+233 24 456 9540</p>
-                <p>stenadu@gmail.com</p>
+                <p>belmontoapartments@gmail.com</p>
                 <p className="pt-2 text-xs">Mon–Sat, 24hr</p>
               </div>
             </div>

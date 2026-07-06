@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="mailto:stenadu@gmail.com" className="hover:text-cream transition-colors">
-                  stenadu@gmail.com
+                  belmontoapartments@gmail.com
                 </a>
               </li>
             </ul>

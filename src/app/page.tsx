@@ -5,7 +5,7 @@ const rooms = [
   {
     name: 'Comfort Suite',
     desc: 'Elegant and efficient. Perfect for the modern professional seeking refined solo living.',
-    beds: '1 bed . 1 kitchen . 1toilet',
+    beds: '1 bed . 1 kitchen . 1bathroom',
     size: '24 m²',
     price: 'From ₵200-₵400/day',
     img: '/images/belmont-room1.jpg',
@@ -13,7 +13,7 @@ const rooms = [
   {
     name: 'Executive Suite',
     desc: 'Generous proportions with a separate living space crafted for comfort and privacy.',
-    beds: 'Standard room . 1 Ironing Stand . 1 Washing Machine',
+    beds: 'Standard room . Wifi . 1 Washing Machine',
     size: '24 m²',
     price: 'From ₵300- ₵600/day',
    img: '/images/belmont-room2.jpg',

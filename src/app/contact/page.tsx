@@ -9,13 +9,25 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-40 pb-24 bg-charcoal">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="section-label text-gold">Contact</p>
-          <h1 className="font-display text-[clamp(3rem,7vw,7rem)] font-light text-cream leading-none">
-            Let's<br />
-            <span className="italic">talk</span>
-          </h1>
+      <section className="pt-20 pb-0 ">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="section-label text-gold">Contact</p>
+            <h1 className="font-display text-[clamp(3rem,7vw,7rem)] font-light text-charcoal leading-none">
+              Let's<br />
+              <span className="italic">talk</span>
+            </h1>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src="/images/letstalk.png"
+              alt="Belmont Apartments"
+              width={320}
+              height={320}
+              className="w-full max-w-xs lg:max-w-sm h-auto object-contain"
+            />
+          </div>
         </div>
       </section>
 
@@ -43,7 +55,7 @@ export default function ContactPage() {
                 </p>
                 <p>
                   <a href="mailto:stenadu@gmail.com" className="text-warm-gray hover:text-charcoal transition-colors">
-                    stenadu@gmail.com
+                    belmontoapartments@gmail.com
                   </a>
                 </p>
               </div>
