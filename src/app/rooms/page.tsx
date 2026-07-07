@@ -9,7 +9,7 @@ const rooms = [
     baths: '1 Bath',
     sleeps: '1–2',
     price: 'From ₵200-₵400',
-    desc: 'An intelligent layout that maximises every square metre. The studio is refined, calm, and complete — ideal for the professional or the minimalist.',
+    desc: 'An intelligent layout that maximises every square metre. The studio is refined, calm, and complete ideal for the professional or the minimalist.',
     features: ['Open-plan kitchen', 'Juliet balcony', 'Built-in wardrobe', 'High ceilings'],
     img: '/images/belmont-room1.jpg',
   },
@@ -82,7 +82,7 @@ export default function RoomsPage() {
             <span className="italic">perfect home</span>
           </h1>
           <p className="text-warm-gray font-sans leading-relaxed lg:max-w-sm">
-            Four distinct residence types. Each designed with the same attention to proportion, material, and light — the differences lie in scale and lifestyle.
+            Four distinct residence types. Each designed with the same attention to proportion, material, and light the differences lie in scale and lifestyle.
           </p>
         </div>
       </section>

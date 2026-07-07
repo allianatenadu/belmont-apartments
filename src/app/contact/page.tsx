@@ -4,7 +4,31 @@ import { useState } from 'react'
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const update = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }))
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.email || !form.message) {
+      setError('Please fill in your name, email, and message.')
+      return
+    }
+    setError('')
+    setLoading(true)
+    try {
+      const res = await fetch('/api/send-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed')
+      setSent(true)
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <>
@@ -130,6 +154,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-xs tracking-widest uppercase text-warm-gray font-sans mb-2">Message</label>
+                  <p className="text-xs text-red-600 mb-2">Book for fast response*</p>
                   <textarea
                     rows={6}
                     placeholder="Tell us how we can help..."
@@ -139,18 +164,21 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {error && <p className="text-sm font-sans text-red-600">{error}</p>}
+
                 <button
-                  onClick={() => setSent(true)}
-                  className="btn-primary text-xs"
+                  onClick={handleSubmit}
+                  disabled={loading}
+                  className="btn-primary text-xs disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {loading ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Map placeholder */}
+       {/* Map placeholder */}
         <div className="mt-24 bg-stone/50 h-80 flex items-center justify-center">
           <div className="text-center">
             <p className="font-display text-2xl font-light text-charcoal mb-2">12 Belmont Avenue</p>
